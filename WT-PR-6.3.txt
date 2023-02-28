@@ -1,0 +1,67 @@
+//Spoural Registration Form Validation (Error object and try...catch..)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Demo</title>
+</head>
+<body>
+<label>Name:</label>
+<input type="text" id="name"><br><br>
+<label>Email:</label>
+<input type="text" id="email"><br><br>
+<label>Phone:</label>
+<input type="text" id="phone"><br><br>
+<label>Collage:</label>
+
+<input type="text" id="collage"><br><br>
+<label>Year:</label>
+<input type="text" id="year"><br><br>
+<label>Branch:</label>
+<input type="text" id="branch"><br><br>
+<button onclick="display()">Submit</button>
+<script src="valid.js"></script>
+</body>
+</html>
+//java Script
+function display(){
+try{
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var phone = document.getElementById("phone").value;
+var college = document.getElementById("college").value;
+var year = document.getElementById("year").value;
+var branch = document.getElementById("branch").value;
+if(name == null || email == null || phone == null || college == null ||
+year == null || branch == null){
+
+throw "Please fill all the fields";
+}
+else if(!validateEmail(email)){
+throw "Please enter a valid email address";
+}
+else if(!validatePhone(phone)){
+throw "Please enter a valid phone number";
+}
+else{
+alert("Registration Successful");
+}
+}
+catch(err){
+alert(err);
+}
+}
+function validateEmail(email)
+{
+var re = /\S+@\S+\.\S+/;
+return re.test(email);
+}
+function validatePhone(phone)
+{
+var re = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+
+return re.test(phone);
+}

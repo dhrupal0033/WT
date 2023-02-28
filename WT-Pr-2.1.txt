@@ -1,0 +1,75 @@
+//Create a calculator using promt
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        body{
+            background: rgb(132, 206, 236);
+        }
+        p{
+            background: rgb(251, 251, 251);
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            text-decoration: double;
+            border:2px solid black;
+            border-radius: 10px;
+            height: fit-content+20;
+            width: fit-content+15;
+        }
+        button{
+           
+            background-color: rgb(165, 138, 190);
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            margin-left:45vw;
+            padding: 7px;
+            height: 7vh;
+            border-radius: 7px;
+        }
+    &lt;/style&gt;
+    &lt;script&gt;
+        function func()
+        {
+                let a=parseFloat(prompt(&quot;Number 1:&quot;));
+                let op=prompt(&quot;Operation: + - * / %&quot;);
+                let b=parseFloat(prompt(&quot;Number 2:&quot;));
+                if(op===&#39;+&#39;)
+                {
+                    console.log(a+b);
+                    document.getElementById(&quot;output&quot;).innerText=(a+b);
+                }
+                else if(op===&#39;-&#39;)
+                {
+                    document.getElementById(&quot;output&quot;).innerText=(a-b);
+                }
+                else if(op===&#39;/&#39;)
+                {
+                    document.getElementById(&quot;output&quot;).innerText=(a/b);
+                }
+                else if(op===&#39;*&#39;)
+                {
+                    document.getElementById(&quot;output&quot;).innerText=(a*b);
+                }
+                else if(op===&#39;%&#39;)
+                {
+                    document.getElementById(&quot;output&quot;).innerText=(a%b);
+                }
+                else
+                {
+                    alert(&quot;Operation not allowed&quot;);
+                }
+        }
+    &lt;/script&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Simple calculator using prompt&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p id=&quot;output&quot;&gt;Here will be the output of your operation &lt;/p&gt;
+    &lt;button onclick=&quot;func()&quot;&gt;&lt;b&gt;click here to begin&lt;/b&gt;&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;

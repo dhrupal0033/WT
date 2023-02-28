@@ -1,0 +1,39 @@
+//Print prime Numbers up to given value in the input box .
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<h3>Prime Number</h3>
+<h4>enter the lower limit:</h4><input type="text" id="num1" value="">
+<h4>enter the upper limit:</h4><input type="text" id="num2" value="">
+<button onclick="fun1()">Submit</button>
+<br>
+<div id="result">Result:</div>
+<script>
+function fun1() {
+let limit1 = document.getElementById('num1').value; let limit2 =
+document.getElementById('num2').value;
+let result = document.getElementById("result");
+result.innerHTML = "Result: ";
+for (let i = limit1; i <= limit2; i++) {
+let prime = true;
+for (let j = 2; j < i; j++) {
+if (i % j == 0) {
+prime = false;
+break;
+}
+}
+if (prime) {
+result.insertAdjacentHTML('beforeend', i + ',');
+}
+}
+}
+</script>
+</body>
+</html>

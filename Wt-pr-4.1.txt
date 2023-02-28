@@ -1,0 +1,38 @@
+//Create Javascript Object of Spoural Registration User input and Display the Object Details on
+Webpage(Table) .
+
+<html>
+<head>
+<title>Display Spoural Regisration User Details</title>
+</head>
+<body>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Gender</th>
+<th>Email</th>
+<th>Phone</th>
+</tr>
+</thead>
+<tbody>
+<script>
+let user = {
+name: 'Dhrupal Mavani',
+gender: 'Male',
+email: '21it081@charusat.edu.in',
+phone: '0123456789'
+};
+document.write(
+`<tr>
+<td>${user.name}</td>
+<td>${user.gender}</td>
+<td>${user.email}</td>
+<td>${user.phone}</td>
+</tr>`
+);
+</script>
+</tbody>
+</table>
+</body>
+</html>

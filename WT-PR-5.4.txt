@@ -1,0 +1,25 @@
+//Zoom image on mouseover and zoom out on mouse out.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<img id="myImage" src="bugo.jpg" onmouseover="zoomIn()" onmouseout="zoomOut()">
+<script>
+function zoomIn() {
+var image = document.getElementById('myImage');
+image.style.width = "98%";
+image.style.height = "98%";
+}
+function zoomOut() { var image = document.getElementById('myImage');
+image.style.width = "60%";
+image.style.height = "60%";
+}
+</script>
+</body>
+</html>

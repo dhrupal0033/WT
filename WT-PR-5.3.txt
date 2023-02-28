@@ -1,0 +1,46 @@
+//Create Arrays of Colors and Apply these colors in order to tr background of table.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Table Colour</title>
+<style>
+table,td{
+border: solid black;
+}
+</style>
+</head>
+<body>
+<h2>Change Table Colour</h2>
+<label for="colorInput">Colour Number:</label>
+<input type="number" id="colorInput">
+<button onclick="changeTableColor()">Change Table Colour</button>
+<br><br>
+<table id="myTable">
+<tr>
+<td>ID</td>
+<td>Name</td>
+<td>Age</td>
+</tr>
+<tr>
+<td>81</td>
+<td>king</td>
+<td>19</td>
+</tr>
+</table>
+<script>
+var colors = ["red", "orange", "yellow", "green", "blue", "indigo",
+"violet"];
+var currentColorIndex = 0;
+function changeTableColor() {
+var table = document.getElementById("myTable");
+var colorInput = document.getElementById("colorInput").value;
+var color = colors[colorInput - 1];
+table.style.backgroundColor = color;
+}
+</script>
+</body>
+</html>

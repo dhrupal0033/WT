@@ -1,0 +1,95 @@
+//create calculator using inputbox
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+
+IT255 – Web Technologies CSPIT-KDPIT
+
+4 | Page
+
+21IT107
+    &lt;style&gt;
+        body{
+            background: rgb(122, 228, 236);
+        }
+        p{
+            background-color: rgb(253, 254, 254);
+            align-items: center;
+            align-content: center;
+            text-align: center;
+            border:2px solid black;
+            border-radius: 10px;
+            height: fit-content+20;
+            width: fit-content+15;
+        }
+        button{
+            align-items: center;
+            align-content: center;
+            text-align: center;
+        }
+    &lt;/style&gt;
+    &lt;script&gt;
+        function func(){
+            let a=parseFloat(document.getElementById(&quot;n1&quot;).value);
+            let b=parseFloat(document.getElementById(&quot;n2&quot;).value);
+            //console.log(typeof a1)
+            let op=document.getElementById(&quot;oper&quot;).value;
+            //console.log(typeof op);
+            if(op===&#39;+&#39;)
+                {
+                    console.log(a+b);
+                    document.getElementById(&quot;output&quot;).innerText=(a+b);
+                }
+                else if(op===&#39;-&#39;)
+                {
+                    document.getElementById(&quot;output&quot;).innerText=(a-b);
+                }
+                else if(op===&#39;/&#39;)
+                {
+                    document.getElementById(&quot;output&quot;).innerText=(a/b);
+                }
+                else if(op===&#39;*&#39;)
+                {
+                    document.getElementById(&quot;output&quot;).innerText=(a*b);
+                }
+                else if(op===&#39;%&#39;)
+
+IT255 – Web Technologies CSPIT-KDPIT
+
+5 | Page
+
+21IT107
+                {
+                    document.getElementById(&quot;output&quot;).innerText=(a%b);
+                }
+                else
+                {
+                    alert(&quot;Operation not allowed&quot;);
+                }
+        }
+    &lt;/script&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Calculator using text input&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p id=&quot;output&quot;&gt;Here will be your output&lt;/p&gt;
+    &lt;label for=&quot;&quot;&gt;Number 1:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;n1&quot;&gt;
+    &lt;label for=&quot;&quot;&gt;Number 2:&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;n2&quot;&gt;
+    &lt;br&gt;
+    &lt;select name=&quot;operation&quot; id=&quot;oper&quot; &gt;
+        &lt;option value=&quot;+&quot;&gt;+&lt;/option&gt;
+        &lt;option value=&quot;-&quot;&gt;-&lt;/option&gt;
+        &lt;option value=&quot;*&quot;&gt;*&lt;/option&gt;
+        &lt;option value=&quot;/&quot;&gt;/&lt;/option&gt;
+        &lt;option value=&quot;%&quot;&gt;%&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;button onclick=&quot;func()&quot;&gt;Click Here to Begin&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;

@@ -1,0 +1,58 @@
+//Demonstrate Class, Properties, Methods and Objects
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class and object</title>
+</head>
+<body>
+<h1>That is a object of a class</h1>
+<div>
+<label for="name">Name:</label>
+<input type="text" id="name" name="name"><br><br>
+<label for="id">ID:</label>
+<input type="text" id="id" name="id"><br><br>
+<form>
+<label>Sem1 SGPA: <input type="text" id="sem1"></label><br><br>
+<label>Sem2 SGPA: <input type="text" id="sem2"></label><br><br>
+<label>Sem3 SGPA: <input type="text" id="sem3"></label><br><br>
+</form>
+<button onclick="displayperson()">DisplayPerson</button><br><br>
+<button onclick="averageofsgpa()">GetAverage</button><br>
+</div>
+<!-- <div id="output"></div> -->
+<p id="output"></p>
+<p id="average"></p>
+<script src="./objofclass.js"></script>
+</body>
+</html>
+//Java Script :
+class Person {
+constructor(name, id) {
+this.name = name;
+this.id = id;
+}
+
+IT255 Web Technologies CSPIT 4IT (2022-2023)
+
+21IT081 Page | 2
+My() {
+return `My name is ${this.name} and My Id is ${this.id}.`;
+}
+}
+function displayperson() {
+let name = document.getElementById("name").value;
+let id = document.getElementById("id").value;
+let person = new Person(name, id);
+let output = document.getElementById("output").innerHTML = person.My();
+}
+function averageofsgpa() {
+var sem1 = Number(document.getElementById("sem1").value);
+var sem2 = Number(document.getElementById("sem2").value);
+var sem3 = Number(document.getElementById("sem3").value);
+var average = (sem1 + sem2 + sem3) / 3;
+document.getElementById("average").innerHTML = "CGPA: " + average;
+}

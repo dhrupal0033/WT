@@ -1,0 +1,95 @@
+//Create a webpage demonstrating “Spoural Event '' and its description, providing a link
+for registration page. Registration form of the student for “Spoural Event'' having
+different fields like type of event, event listing, Student ID/Group, Branch, etc
+Use Suitable HTML components and its properties wherever required.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register Form for Charusat spoural Event</title>
+<style>body{
+background-image: url(wp6717939.jpg);
+color: white;
+}
+h1{
+text-align: center;
+color: rgb(32, 158, 193);
+}
+</style>
+</head>
+<body>
+<h1>Spoural Event</h1>
+<form>
+<table>
+Please fill in this form to participate in Spoural.
+<tr>
+<td><label for="name"><b>Name</b></label></td>
+<td> <input type="text" name="name" id="name" placeholder="full name" required></td>
+</tr>
+<tr>
+<td><label for="id"><b>Charusat id</b></label></td>
+<td><input type="id" name="id" id="id" placeholder="e.g 21IT081" required></td>
+</tr>
+<tr>
+<td><label for="email"><b>Charusat email</b></label></td>
+<td><input type="email" email="email" id="email" placeholder="xyz@chasusat.edu.in"
+required></td>
+</tr>
+<tr>
+<td><label for="branch"><b>Department</b></label></td>
+
+IT-255-Web Technology 21IT081
+
+<td><input type="branch" branch="branch" id="branch" placeholder="IT" required></td>
+</tr><br>
+<td><label for="gender"><b>Gender</b></label></td>
+<td>
+<input type="radio" id="name" name="gender" value="Male" required> Male
+<input type="radio" name="gender" value="Female"> Female</td>
+<br>
+<tr>
+<td><label for="semester"><b>Semester</b></label></td>
+<td>
+<input type="radio" id="name" name="semester" value="1" required>1
+<input type="radio" name="semester" value="4">4
+<input type="radio" name="semester" value="6">6
+<input type="radio" name="semester" value="8">8</td>
+<br>
+</tr>
+<tr>
+<td><label for="Sport Event"><b><h3>Sport Event</h3></b></label></td>
+</tr>
+<tr>
+<td>
+<input type="checkbox"> Football<br>
+<input type="checkbox"> Cricket<br>
+<input type="checkbox"> Kabaddi<br>
+<input type="checkbox"> Basketball<br>
+<input type="checkbox"> vollyball<br>
+</td>
+</tr>
+<tr>
+<td><label for="Sport Event"><b><h3>Cultural Event</h3></b></label></td>
+</tr>
+<tr>
+<td><input type="checkbox"> Dancing<br>
+<input type="checkbox"> Singing<br>
+<input type="checkbox"> Stand-up-comedy<br>
+<input type="checkbox"> mimicry<br>
+<input type="checkbox"> Drama<br>
+</td>
+</tr>
+<tr>
+<td><button type="submit" class="registerbtn">Submit</button></td>
+</tr>
+
+IT-255-Web Technology 21IT081
+
+</table>
+</form>
+</body>
+</html>

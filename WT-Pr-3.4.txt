@@ -1,0 +1,40 @@
+//Find the Age from input date.(Ex. 17 Yrs, 3 Monts,13 Days).
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<label>Enter your birthdate:</label>
+<input type="text" id="birthdate" placeholder="yyyy-mm-dd">
+<button onclick="calculateAge()">Calculate age</button>
+<p id="output"></p>
+<script>
+function calculateAge() {
+var birthdate = new Date(document.getElementById("birthdate").value);
+var today = new Date();
+var years = today.getFullYear() - birthdate.getFullYear();
+var months = today.getMonth() - birthdate.getMonth();
+var days = today.getDate() - birthdate.getDate();
+if (days < 0) {
+days += 30;
+months--;
+}
+if (months < 0) {
+months += 12;
+years--;
+}
+if (months === 0 && days === 0 && today.getDate() <
+birthdate.getDate()) {
+years--;
+}
+document.getElementById("output").innerHTML = "Your age is: " + years
++ " Yrs, " + months + " Months, " + days + " Days.";
+}
+</script>
+</body>
+</html>
